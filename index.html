@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="assets/javascript/jQuery.js"></script>
+    <script src="assets/javascript/train.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">CATCH-A-TRAIN</h1>
+            <p class="lead">Catch the next train</p>
+        </div>
+    </div>
+    <h1>Train Scheduler</h1>
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="container">
+        <form>
+            <div class="form-group">
+                <label for="formGroupExampleInput">Train Name</label>
+                <input type="text" class="form-control" id="trainName" placeholder="Reading Railroad">
+            </div>
+            <div class="form-group">
+                <label for="formGroupExampleInput2">Train Destination</label>
+                <input type="text" class="form-control" id="trainDestination" placeholder="Alberquerque">
+            </div>
+            <div class="form-group">
+                <label for="formGroupExampleInput2">Train Arrival</label>
+                <input type="text" class="form-control" id="trainArrival" placeholder="0800">
+            </div>
+            <div class="form-group">
+                <label for="formGroupExampleInput2">Train Frequency</label>
+                <input type="text" class="form-control" id="trainFreq" placeholder="24min">
+            </div>
+            <button id="submitButton" type="button" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyA_Zq_5UBGYsAoKAcWLc8Ptui3eXcz1US4",
+            authDomain: "trainscheduler-2f84b.firebaseapp.com",
+            databaseURL: "https://trainscheduler-2f84b.firebaseio.com",
+            projectId: "trainscheduler-2f84b",
+            storageBucket: "trainscheduler-2f84b.appspot.com",
+            messagingSenderId: "1005720039597",
+            appId: "1:1005720039597:web:61c9d6e09ce8b154"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+</body>
+
+</html>
